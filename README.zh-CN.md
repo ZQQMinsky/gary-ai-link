@@ -1,6 +1,8 @@
-# 借脑（agent-peer-bridge）
+# AI link
 
 **把团队里 AI 用得最好的那个人的 AI，借给团队里的每个人。**
+
+原名 agent-peer-bridge / 借脑。Python 包名和 `apb-relay`、`apb-executor`、`apb-mcp` 这几个命令都没改，已经装好的电脑不用动。
 
 让不同电脑上的编程智能体互相派活。一台电脑上的智能体，可以在另一台电脑上**新建、续接、读取、列出、停止真实的会话**：Claude Code 和 Codex 可以互相调用，同类之间也行。中间只隔一个很小的中继。两台机器都不用开放端口，发起方能做的事，也永远不会超过对方机器主人允许的范围。同一套机制也能让整个团队，以及每个同事自己的智能体，用上你手里装备最好的那个智能体，每个人有自己的工作区、权限和规矩。
 
@@ -33,7 +35,7 @@
 所有涉及的机器都要安装，需要 Python 3.10 以上，没有第三方依赖：
 
 ```bash
-git clone <本仓库> && cd agent-peer-bridge && python3 -m pip install -e .
+git clone https://github.com/garycaogan/gary-ai-link && cd gary-ai-link && python3 -m pip install -e .
 ```
 
 **1. 中继**：放在两台机器都能通过 HTTPS 访问到的地方，可以是其中一台机器，也可以是一台云服务器。
